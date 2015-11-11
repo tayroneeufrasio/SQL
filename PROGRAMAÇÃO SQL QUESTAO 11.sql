@@ -1,0 +1,13 @@
+DECLARE @X INT
+SET @X = 1
+WHILE (@X <= 12)
+BEGIN
+
+SELECT AVG (V.VL_TOTAL) AS VL_MEDIA,
+                   @X AS MES
+ FROM VENDA V
+ 
+ WHERE(MONTH(V.DT_VENDA) = @X)
+ AND (YEAR (V.DT_VENDA) = '2015')
+ SET @X = @X + 1
+ END

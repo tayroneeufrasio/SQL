@@ -1,0 +1,46 @@
+   CREATE DATABASE TESTEBANCO
+   
+   CREATE TABLE PESSOA(
+     ID_PESSOA int primary key NOT NULL,
+     NM_NOME varchar(30) NOT NULL,
+     DS_TELEFONE varchar(30) NOT NULL,
+      );
+    CREATE TABLE PESSOA_FISICA( 
+     CD_CPF varchar(30) NOT NULL,
+     CD_RG varchar(30) NTO NULL,
+     );
+     
+      INSERT INTO PESSOA(ID_PESSOA, NM_NOME, DS_TELEFONE)
+      VALUES(1,'JOSÉ DA SILVA','88 3511-0011')
+      
+      @ID_PESSOA INT
+      SET @ID_PESSOA = SELECT MAX(ID_PESSOA) FROM PESSOA
+      
+      INSERT INTO PESSOA_FISICA(CD_CPF, CD_RG)
+      VALUES('123.456.781-11','97898112');
+      
+      INSERT INTO PESSOA(NM_NOME, DS_TELEFONE)
+      VALUES ('MARIA DA LUZ', '88 3512-5588');
+
+      @ID_PESSOA INT
+      SET @ID_PESSOA = SELECT MAX(ID_PESSOA) FROM PESSOA
+      
+      INSERT INTO PESSOA_FISICA(CD_CPF, CD_RG)
+      VALUES('123.456.781-11','97898112');
+      
+      INSERT INTO PESSOA(ID_PESSOA, NM_NOME, DS_TELEFONE)
+      VALUES(1,'ANTONIO DO TESTE','85 3010-2250')
+      
+      @ID_PESSOA INT
+      SET @ID_PESSOA = SELECT MAX(ID_PESSOA) FROM PESSOA
+      
+      INSERT INTO PESSOA_FISICA(CD_CPF, CD_RG)
+      VALUES('970.073.855-70','32023759');
+------------------------------------------------------------------------------
+      UPDATE PESSOA SET NM_NOME=’MARIA DE JESUS’ WHERE ID_PESSOA= 2 
+
+      
+      UPDATE PESSOA_FISICA SET CD_CPF=’230.056.00-20’ WHERE ID_PESSOA= 1
+
+   
+----------------------------------------------------------------------------
